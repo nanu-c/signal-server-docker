@@ -1,0 +1,57 @@
+twilio:
+  accountId: a
+  accountToken: a
+  numbers: [1]
+  localDomain: a
+
+push:
+  host: "localhost"
+  port: 9090
+  username: "user"
+  password: "password"
+
+server:
+  applicationConnectors:
+    - type: https
+      port: 8080
+      keyStorePath: config/example.keystore
+      keyStorePassword: example
+      validateCerts: false
+  adminConnectors:
+    - type: https
+      port: 8081
+      keyStorePath: config/example.keystore
+      keyStorePassword: example
+      validateCerts: false
+
+websocket:
+        enabled: true
+
+s3:
+  accessKey: a
+  accessSecret: a
+
+  # Name of the S3 bucket (needs to have been created)
+  # for attachments to go.  Should be configured with
+  # correct permissions.
+  attachmentsBucket: a
+
+cache:
+  url: http://127.0.0.1:6379
+
+directory:
+  url: http://127.0.0.1:6379
+
+messageStore:
+  driverClass: org.postgresql.Driver
+  user: whisper
+  password: whisper
+  url: jdbc:postgresql://localhost:5432/messagedb
+
+database:
+  driverClass: org.postgresql.Driver
+  user: whisper
+  password: whisper
+  url: jdbc:postgresql://localhost:5432/accountdb
+  properties:
+    charSet: UTF-8

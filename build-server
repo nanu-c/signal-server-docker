@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+docker run -it --rm --name signal-server -v "$(pwd)/Signal-Server":/usr/src/mymaven -w /usr/src/mymaven maven:3-jdk-11-openj9 mvn clean install -DskipTests
+docker build --rm -t signal-server .

@@ -1,4 +1,4 @@
-Docker container to run TextSecure server
+Docker container to run a Signal server
 -----------------------------------------
 
 This relies on the user providing the textsecure and push server jars in
@@ -6,6 +6,20 @@ jar/ and the config files under config/.
 
 See the Dockerfile comments for how to build the image. The container can
 be run from the root of this repository.
+
+Docs
+----------
+https://github.com/LiteSpeedDev/SignalApp-Setup
+
+Build
+-----------
+* install Docker
+
+`./build-server`
+
+Run
+-----------
+`docker run -p 8080:8080 -p 8081:8081 -P -v $(pwd)/config:/home/whisper/config -it signal-server`
 
 Using https
 -----------
