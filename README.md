@@ -15,6 +15,10 @@ Build
 -----------
 * install Docker
 
+* initialise git submodule
+`git submodule init&&
+git submodule update`
+* build 
 `./build-server`
 
 Run
